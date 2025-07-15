@@ -88,3 +88,101 @@ The **Quiz Management System** allows:
 ```bash
 git clone https://github.com/tapanKr277/QuizManagementSystem.git
 cd QuizManagementSystem
+
+
+2. Setup Backend
+Navigate to backend directory:
+bash
+Copy
+Edit
+cd backend
+Run Spring Boot services:
+bash
+Copy
+Edit
+# For Maven:
+mvn clean install
+mvn spring-boot:run
+
+# OR for Gradle:
+./gradlew bootRun
+⚙️ Make sure to configure application.properties with your database and Gemini API key.
+
+3. Setup Frontend
+Navigate to frontend directory:
+bash
+Copy
+Edit
+cd frontend
+Install dependencies:
+bash
+Copy
+Edit
+npm install
+Run the Angular app:
+bash
+Copy
+Edit
+ng serve
+App will be available at http://localhost:4200/.
+
+🤖 AI Integration Details
+When a teacher/admin uploads a PDF:
+
+The backend calls the Gemini API
+
+Extracts text content from the PDF
+
+Converts it into relevant quiz questions
+
+Saves it to the quiz database automatically
+
+This process is powered by a dedicated microservice and runs asynchronously using Feign + background processing.
+
+📊 API Documentation
+Swagger is available at:
+
+bash
+Copy
+Edit
+http://localhost:PORT/swagger-ui/
+🎓 Education Use Case
+Ideal for:
+
+Coaching centers
+
+Schools & Colleges
+
+Self-practice portals
+
+Online mock test platforms
+
+🧑‍💻 Author
+Tapan Kumar
+📫 tapankr277@gmail.com
+🔗 Portfolio
+💼 LinkedIn
+
+📌 Future Enhancements
+Performance insights powered by AI
+
+Real-time student dashboards
+
+Role-based dashboards for teachers vs students
+
+Enhanced natural language chatbot
+
+Built with ❤️ using Angular, Spring Boot & AI
+
+yaml
+Copy
+Edit
+
+---
+
+Let me know if you also want:
+- A `vercel.json` file
+- GitHub badges for CI, tech stack, or contributors
+- Dark mode version with image previews/screenshots
+
+I'll help you style it further if needed.
