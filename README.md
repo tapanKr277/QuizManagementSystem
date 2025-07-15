@@ -167,18 +167,3 @@ Tapan Kumar
 💬 Enhanced natural language chatbot support
 
 Built with ❤️ using Angular, Spring Boot, Microservices & AI
-
-<!-- Optional Enhancements --> <!-- Let me know if you'd like: - GitHub badges - Screenshots or animated GIFs - Dark mode styling - Deployment CI/CD status -->
-markdown
-Copy
-Edit
-
-You can paste this directly into your existing `README.md` file under the previous sections.
-
-Let me know if you'd like:
-- 📸 Screenshots or demo GIFs  
-- 📦 `vercel.json` setup  
-- 🛠 GitHub action CI badge  
-- 🌙 Dark-mode optimized markdown  
-
-I can generate all that next.
