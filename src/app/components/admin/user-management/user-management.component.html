@@ -1,0 +1,176 @@
+<!-- Table with Records -->
+<div class="table relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+  <table class="w-full text-left table-auto min-w-max">
+      <thead>
+          <tr>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-none">
+                      ID
+                  </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-none ">
+                      Username
+                  </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p class="block font-sans text-xs antialiased font-normal leading-none ">
+                    First Name
+                </p>
+            </th>
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p class="block font-sans text-xs antialiased font-normal leading-none ">
+                    Last Name
+                </p>
+            </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-none ">
+                      Email
+                  </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-none ">
+                      Phone Number
+                  </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-none ">
+                      Active
+                  </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p class="block font-sans text-xs antialiased font-normal leading-none ">
+                    OTP Verified
+                </p>
+            </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-none ">
+                      Verified
+                  </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p class="block font-sans text-xs antialiased font-normal leading-none ">
+                    OTP last Updated
+                </p>
+            </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-none">
+                      Created At
+                  </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-none ">
+                      Last Update
+                  </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-none ">
+                      Actions
+                  </p>
+              </th>
+          </tr>
+      </thead>
+      <tbody *ngIf="users.length>0">
+          <tr *ngFor="let user of users" >
+              <td class="p-4 border-b border-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                      {{ user.userId }}
+                  </p>
+              </td>
+              <td class="p-4 border-b border-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                      {{ user.username }}
+                  </p>
+              </td>
+              <td class="p-4 border-b border-blue-gray-50">
+                <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                    {{ user.firstName }}
+                </p>
+            </td>
+            <td class="p-4 border-b border-blue-gray-50">
+                <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                    {{ user.lastName }}
+                </p>
+            </td>
+              <td class="p-4 border-b border-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                      {{ user.email }}
+                  </p>
+              </td>
+              <td class="p-4 border-b border-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                      {{ user.phoneNumber }}
+                  </p>
+              </td>
+              <td class="p-4 border-b border-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                      {{ user.isActive ? 'Yes' : 'No' }}
+                  </p>
+              </td>
+              <td class="p-4 border-b border-blue-gray-50">
+                <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                    {{ user.isOtpVerified ? 'Yes' : 'No' }}
+                </p>
+            </td>
+              <td class="p-4 border-b border-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                      {{ user.isVerified ? 'Yes' : 'No' }}
+                  </p>
+              </td>
+              <td class="p-4 border-b border-blue-gray-50">
+                <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                    <span *ngIf="user.otpLastUpdate; else noDate">
+                      {{ user.otpLastUpdate | date:'short' }}
+                    </span>
+                    <ng-template #noDate>NA</ng-template>
+                  </p>
+            </td>
+              <td class="p-4 border-b border-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                      {{ user.createdAt | date:'short' }}
+                  </p>
+              </td>
+              <td class="p-4 border-b border-blue-gray-50">
+                  <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                      {{ user.lastUpdate | date:'short' }}
+                  </p>
+              </td>
+              <td class="p-4 border-b border-blue-gray-50 btn-row">
+                  <!-- Edit Button with Tooltip -->
+                  <button class="edit-btn" (click)="openEditModal(user)">
+                      <img src="https://cdn-icons-png.flaticon.com/512/14025/14025007.png" width="20" height="20" alt="edit-icon" title="Edit User" class="img-small"> 
+                  </button> 
+                  <!-- Delete Button with Tooltip -->
+                  <button class="delete-btn" (click)="deleteRecord(user.username)">
+                      <img src="https://cdn-icons-png.flaticon.com/512/6711/6711573.png" width="20" height="20" alt="Delete free icon" title="Delete User">
+                  </button>
+
+              </td>
+          </tr>
+      </tbody>
+      <tbody *ngIf="users.length == 0 && !isLoading">
+        <tr>
+            <td colspan="9" class="text-center p-4">
+                No records found
+            </td>
+        </tr>
+    </tbody>
+    <tbody *ngIf="users.length === 0 && isLoading">
+        <tr>
+            <td colspan="9" class="text-center p-4">
+                <app-table-loader></app-table-loader> </td>
+        </tr>
+    </tbody>
+  </table>
+    <!-- Modal for Delete -->
+    <div class="modal" *ngIf="isDeleteModalOpen">
+        <app-delete-modal  [title]="title" (isDelete)="isDelete($event)">
+        </app-delete-modal>
+      </div>
+    
+      <!-- Modal for User Form -->
+      <div class="modal" *ngIf="isUserModalOpen">
+        <app-edit-user-form-modal [selectedUser]="selectedUser"  (userUpdated)="onUserUpdated($event)" ></app-edit-user-form-modal>
+      </div>
+</div>
+

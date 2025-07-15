@@ -1,0 +1,107 @@
+<div class="container">  
+    <!-- Sidenav container -->
+    <mat-sidenav-container class="sidenav-container">
+      <!-- Sidebar (mat-sidenav) -->
+      <mat-sidenav #sidenav mode="side" [opened]="isSidenavOpen" position="start">
+        <div class="leftbar">
+          <div class="heading">
+            <p class="title">Tables</p> 
+          </div>
+          <div>
+            <ul>
+              <li (click)="selectTab('user')">
+                User
+                <button class="add-btn" (click)="isCreateFormEnable('user')">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" width="20" height="20" alt="Add User" class="img-small">
+                </button>
+              </li>
+              <li (click)="selectTab('role')">
+                Role
+                <button class="add-btn" (click)="isCreateFormEnable('role')">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" width="20" height="20" alt="Add Role" class="img-small">
+                </button>
+              </li>
+              <li (click)="selectTab('user_role')">
+                USER ROLE
+                <button class="add-btn" (click)="isCreateFormEnable('user_role')">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" width="20" height="20" alt="Add Role" class="img-small">
+                </button>
+              </li>
+              <li (click)="selectTab('token')">
+                Email Token
+                <button class="add-btn" (click)="isCreateFormEnable('token')">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" width="20" height="20" alt="Add Token" class="img-small">
+                </button>
+              </li>
+              <li (click)="selectTab('otp')">
+                OTP
+                <button class="add-btn" (click)="isCreateFormEnable('otp')">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" width="20" height="20" alt="Add OTP" class="img-small">
+                </button>
+              </li>
+              <li (click)="selectTab('quiz')">
+                Quiz
+                <button class="add-btn" (click)="isCreateFormEnable('quiz')">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" width="20" height="20" alt="Add Quiz" class="img-small">
+                </button>
+              </li>
+              <li (click)="selectTab('quiz_attempt')">
+                Quiz Attempt
+                <button class="add-btn" (click)="isCreateFormEnable('quiz_attempt')">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" width="20" height="20" alt="Add Quiz" class="img-small">
+                </button>
+              </li>
+              <li (click)="selectTab('quiz_attempt_answer')">
+                Quiz Attempt Answers
+                <button class="add-btn" (click)="isCreateFormEnable('quiz_attempt_answer')">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" width="20" height="20" alt="Add Quiz" class="img-small">
+                </button>
+              </li>
+              <li (click)="selectTab('quiz_question_id')">
+                Quiz Question Ids
+                <button class="add-btn" (click)="isCreateFormEnable('quiz_question_id')">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" width="20" height="20" alt="Add Quiz" class="img-small">
+                </button>
+              </li>
+              <li (click)="selectTab('question')">
+                Question
+                <button class="add-btn" (click)="isCreateFormEnable('question')">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" width="20" height="20" alt="Add Question" class="img-small">
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </mat-sidenav>
+  
+      <!-- Main content area (rightbar) -->
+      <mat-sidenav-content class="rightbar sidebar-content">
+        <div class="header">
+          <h2><b>Admin Dashboard</b></h2>
+        </div>
+  
+        <!-- Filter and Sort Options -->
+        <div class="options-bar">
+          <div class="filter">
+            <input type="text" placeholder="Filter by username" class="filter-input">
+          </div>
+          <div class="sort">
+            <select class="sort-select">
+              <option value="asc">Sort Ascending</option>
+              <option value="desc">Sort Descending</option>
+            </select>
+          </div>
+        </div>
+  
+        <!-- Dynamic Content -->
+        <app-user-management *ngIf="selectedTab=='user'" ></app-user-management>
+        <app-role-management *ngIf="selectedTab=='role'" ></app-role-management>
+        <app-token-management *ngIf="selectedTab=='token'" ></app-token-management>
+        <app-otp-management *ngIf="selectedTab=='otp'"></app-otp-management>
+        <app-quiz-management *ngIf="selectedTab=='quiz'"  ></app-quiz-management>
+        <app-question-management *ngIf="selectedTab=='question'" ></app-question-management>
+  
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+  

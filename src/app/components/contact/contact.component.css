@@ -1,0 +1,212 @@
+/* Login container styling */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #FAFAFC;
+    gap: 100px;
+  }
+
+
+  
+  /* Login box styling */
+  .contact-box {
+    font-size: 14px;
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    /* width: 100%; */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .contact-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+  
+  /* Heading styling */
+  .contact-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    font-size: 10px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+
+
+  .form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+  
+  /* Focus effect for inputs */
+  .form-group input:focus,
+  .form-group textarea:focus {
+      border-color: #007bff;
+  }
+
+  .form-group input:hover,
+  .form-group textarea:hover {
+      border-color: #007bff;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  
+  /* Login button styling */
+  .btn-send {
+    padding: 8px 15px;
+    background-color: #4A3AFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .btn-send:hover {
+    background-color: #ffff;
+    color: black;
+    border: solid 0.5px black;
+  }
+  
+  /* Links for "Forgot Password" and "Create an Account" */
+  .links {
+    margin-top: 15px;
+  }
+  
+  .links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 5px;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+
+  .content{
+    margin-bottom: 30px;
+  }
+
+  /* Links hover effect */
+  .links a:hover {
+    color: #0056b3;
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .contact-box {
+        padding: 20px 30px;
+    }
+
+    .contact-box h2 {
+        font-size: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Mobile-specific Styling */
+@media (max-width: 768px) {
+
+  /* Container Styling */
+  .container {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    gap: 50px; /* Adjust gap to make the layout less wide */
+    padding: 20px;
+  }
+
+  /* Contact Box Styling */
+  .contact-box {
+    width: 100%; /* Full width for mobile */
+    padding: 20px 30px;
+    font-size: 12px; /* Adjust font size for better readability */
+  }
+
+  .contact-box h2 {
+    font-size: 20px; /* Slightly smaller heading for mobile */
+    margin-bottom: 10px; /* Reduce the bottom margin */
+  }
+
+  .contact-box p {
+    font-size: 14px; /* Make the text a bit larger for readability */
+    margin-bottom: 15px; /* Add some space below the paragraph */
+  }
+
+  /* Form Group Adjustments */
+  .form-group {
+    margin-bottom: 15px; /* Reduce the space between form groups */
+  }
+
+  /* Input and Textarea Styling */
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px; /* Larger text for better readability */
+    padding: 12px;
+    width: 100%; /* Ensure the inputs and textarea are full width */
+  }
+
+  /* Button Styling */
+  .btn-send {
+    width: 100%; /* Make the button take full width */
+    padding: 12px;
+    font-size: 14px; /* Larger font size for easier clicking */
+  }
+
+  /* Links Styling */
+  .links {
+    text-align: center; /* Center the links for mobile */
+    margin-top: 15px;
+  }
+
+  .links a {
+    font-size: 14px; /* Adjust the font size for readability */
+    display: block; /* Stack links vertically */
+    margin: 10px 0; /* Add some space between the links */
+  }
+
+  /* Adjust Image Size */
+  .image img {
+    width: 200px; /* Resize the image for mobile */
+    height: auto;
+    margin-bottom: 20px; /* Add some space below the image */
+  }
+
+  /* Focus Effect for Mobile */
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #4A3AFF; /* Change focus color to match the button */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+  

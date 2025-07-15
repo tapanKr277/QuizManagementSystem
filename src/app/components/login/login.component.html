@@ -1,0 +1,91 @@
+<!-- login.component.html -->
+
+<div *ngIf="!isLoading" class="login-container">
+
+  <div class="image-container fadeInLeft">
+    <div>
+      <img src="https://cdn-icons-png.flaticon.com/512/1081/1081040.png " width="256" height="256" alt="" title="" class="img-small">
+    </div>
+  </div>
+    
+    <div class="login-box fadeInRight">
+      <!-- <h2>Login</h2> -->
+      <div class="content">
+        <h2>Lets Sign you in</h2>
+        <p><b>Welcome Back,</b> </p>
+        <p><b>You have been missed</b></p>
+        </div>
+      <form (ngSubmit)="onLogin()" [formGroup]="loginForm" >
+        <div class="form-group">
+          <input type="email" id="email" name="email" formControlName="email" required placeholder="Enter your email">
+          <div class="text-danger" *ngIf="loginForm.get('email').touched && loginForm.get('email').invalid">
+            <small *ngIf="loginForm.get('email').hasError('required')"  >Email is required.</small>
+            <small *ngIf="loginForm.get('email').hasError('email')" >Please enter a valid email address.</small>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <input
+          [type]="isPasswordVisible ? 'text' : 'password'" 
+          id="password" 
+          name="password"
+          formControlName="password" 
+          required placeholder="Enter your password">
+          
+          <div class="eye-div">
+            <img *ngIf="!isPasswordVisible"
+            src="https://cdn-icons-png.flaticon.com/512/10812/10812267.png" 
+            width="15" height="15" 
+            alt="Toggle password visibility" 
+            class="eye-icon" 
+            (click)="togglePasswordVisibility()">
+  
+            <img *ngIf="isPasswordVisible"
+            src="   https://cdn-icons-png.flaticon.com/512/159/159604.png "
+             width="15"
+              height="15"
+               alt="" title="" 
+               class="eye-icon" 
+               (click)="togglePasswordVisibility()">
+          </div>
+          
+          <div class="text-danger" *ngIf="loginForm.get('password').touched && loginForm.get('password').invalid">
+            <small *ngIf="loginForm.get('password').hasError('required')"  >Password is required.</small>
+            <small *ngIf="loginForm.get('password').hasError('minlength')" >Password length must be greated than 4</small>
+          </div>
+        </div>
+  
+        <button type="submit" class="btn-login" [disabled]="loginForm.invalid">Login</button>
+        
+        <div class="or-divider m-2" style="display: flex; align-items: center; text-align: center;">
+          <hr style="flex: 1; border: none; border-top: 1px solid #ccc; margin: 0 10px;" />
+          <span>or</span>
+          <hr style="flex: 1; border: none; border-top: 1px solid #ccc; margin: 0 10px;" />
+        </div>
+
+        <div class="oauth-container"> 
+          <button type="button" class="btn-google-login" (click)="onGoogleLogin()">
+            <div class="oauth">
+              <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" width="20" height="20" alt="Google Icon">
+              <span>Login with Google</span>
+            </div>
+          </button>
+  
+          <button type="button" class="btn-github-login" (click)="onGithubLogin()">
+            <div class="oauth">
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" width="20" height="20" alt="GitHub Icon">
+              <span>Login with GitHub</span>
+            </div>
+          </button>
+        </div>
+
+        <div class="links">
+          <a routerLink="/forgot-password">Forgot Password?</a>
+          <a routerLink="/register">Create an account</a>
+        </div>
+      </form>
+    </div>
+</div>
+<div *ngIf="isLoading" class="login-container">
+  <app-loader></app-loader>
+</div>

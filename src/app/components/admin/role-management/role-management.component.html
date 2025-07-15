@@ -1,0 +1,102 @@
+<!-- Table with Role Records -->
+<div class="table relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+    <table class="w-full text-left table-auto min-w-max">
+        <thead>
+            <tr>
+                <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                    <p class="block font-sans text-xs antialiased font-normal leading-none">
+                        Role ID
+                    </p>
+                </th>
+                <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                    <p class="block font-sans text-xs antialiased font-normal leading-none">
+                        Role Name
+                    </p>
+                </th>
+                <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                    <p class="block font-sans text-xs antialiased font-normal leading-none">
+                        Description
+                    </p>
+                </th>
+                <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                    <p class="block font-sans text-xs antialiased font-normal leading-none">
+                        Created At
+                    </p>
+                </th>
+                <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                    <p class="block font-sans text-xs antialiased font-normal leading-none">
+                        Last Update
+                    </p>
+                </th>
+                <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                    <p class="block font-sans text-xs antialiased font-normal leading-none">
+                        Actions
+                    </p>
+                </th>
+            </tr>
+        </thead>
+        <tbody *ngIf="roles.length > 0">
+            <tr *ngFor="let role of roles">
+                <td class="p-4 border-b border-blue-gray-50">
+                    <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                        {{ role.roleId }}
+                    </p>
+                </td>
+                <td class="p-4 border-b border-blue-gray-50">
+                    <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                        {{ role.role }}
+                    </p>
+                </td>
+                <td class="p-4 border-b border-blue-gray-50">
+                    <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                        {{ role.description }}
+                    </p>
+                </td>
+                <td class="p-4 border-b border-blue-gray-50">
+                    <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                        {{ role.createdAt | date:'short' }}
+                    </p>
+                </td>
+                <td class="p-4 border-b border-blue-gray-50">
+                    <p class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">
+                        {{ role.lastUpdate | date:'short' }}
+                    </p>
+                </td>
+                <td class="p-4 border-b border-blue-gray-50 btn-row">
+                    <!-- Edit Button with Tooltip -->
+                    <button class="edit-btn" (click)="openEditRoleModal(role)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/14025/14025007.png" width="20" height="20" alt="edit-icon" title="Edit Role" class="img-small"> 
+                    </button> 
+                    <!-- Delete Button with Tooltip -->
+                    <button class="delete-btn" (click)="deleteRoleRecord(role.roleId)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/6711/6711573.png" width="20" height="20" alt="Delete free icon" title="Delete Role">
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="roles.length == 0 && !isLoading">
+            <tr>
+                <td colspan="6" class="text-center p-4">
+                    No records found
+                </td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="roles.length === 0 && isLoading">
+            <tr>
+                <td colspan="6" class="text-center p-4">
+                    <app-table-loader></app-table-loader> </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="modal" *ngIf="isDeleteModalOpen">
+        <app-delete-modal [title]="title" >
+        </app-delete-modal>
+      </div>
+    
+      <!-- Modal for User Form -->
+      <div class="modal" *ngIf="isRoleModalOpen">
+        <app-edit-user-role-form-modal [selectedUserRole]="selectedUserRole" >
+        </app-edit-user-role-form-modal>
+      </div>
+  </div>
+  

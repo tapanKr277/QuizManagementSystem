@@ -1,0 +1,383 @@
+.container {
+  background-color: #FAFAFC;
+  height: 100vh;
+  width: 100vw; 
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+label {
+
+  flex-direction: row;
+  font-size: 10px;
+  margin-bottom: 5px;
+  gap: 10px;
+  color: #333;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+
+
+/* Focused state for inputs */
+input:focus,  select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Hover effect for inputs */
+input:hover, select:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Styling for the dropdown */
+select {
+  appearance: none; /* Removes default dropdown arrow */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><polygon points="0,0 16,0 8,8" fill="#000000"></polygon></svg>'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+
+
+.filter{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+
+
+
+.filters{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  align-items: center;
+  text-align: center;
+  height: 70px;
+  width: 100%;
+
+}
+
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 35px;
+  width: 50%;
+ }
+
+.quiz-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.in-quiz-container{
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+
+
+.quizs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  gap: 7px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #DFDEF1 #f1f1f1;
+  padding: 20px 30px;
+}
+
+
+
+.quiz-card {
+  background-color: #FAFAFC;
+  border-radius: 8px;
+  height: 250px;
+  width: 300px;
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+  font-size: 10px; 
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column; 
+}
+
+
+
+.quiz-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.content{
+  margin-bottom: 20px;
+}
+.title{
+  font-size: 14px;
+  font-weight: bolder;
+  
+}
+
+p{
+  font-size: 10px;
+}
+.btn{
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.start-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%; 
+  gap: 10px;
+  padding: 8px 10px;
+  background-color: #4A3AFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px; /* Increased font size for better visibility */
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+.clear-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  gap: 10px;
+  padding: 8px 10px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px; /* Increased font size for better visibility */
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+.clear-btn:hover {
+  background-color: #fff;
+  color: black;
+  border: solid 0.5px black;
+}
+
+
+.delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%; 
+  gap: 10px;
+  padding: 8px 10px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px; /* Increased font size for better visibility */
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Push the button to the bottom of the card */
+}
+.delete-btn:hover {
+  background-color: #fff;
+  color: black;
+  border: solid 0.5px black;
+}
+
+/* Button hover effect */
+.start-btn:hover {
+  background-color: #fff;
+  color: black;
+  border: solid 0.5px black;
+}
+
+
+
+.no-quiz{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont{
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.dropdown-btn{
+  font-size: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+.dropdown-menu {
+  font-size: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 80%;
+  margin-top: 0.25rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow: hidden; 
+  white-space: nowrap;
+}
+
+.dropdown-option {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+
+.add-quiz-btn{
+  display: flex;
+  padding: 6px 10px;
+  gap: 10px;
+  background-color: #4A3AFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+
+.add-quiz-btn:hover {
+  background-color: #ffff;
+  color: black;
+  border: solid 0.5px black;
+}
+
+
+
+
+
+
+/* Media query for devices with a max-width of 768px (tablets and smaller devices) */
+@media screen and (max-width: 768px) {
+  .filters {
+    flex-direction: row; /* Stack filters vertically */
+    padding-left: 20px;
+    overflow-x: auto;
+    width: 100%;
+    gap: 20px;
+  }
+  .filter-item {
+    width: 100%;
+    margin-bottom: 15px; /* Add space between filter items */
+  }
+
+  .clear-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+
+}
+  .quizs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Media query for devices with a max-width of 480px (mobile devices) */
+@media screen and (max-width: 480px) {
+  .filters {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .filter-item {
+    width: 100%;
+    margin-bottom: 10px; /* Reduce margin for mobile */
+  }
+
+  label {
+    font-size: 10px; /* Further reduce label size */
+  }
+
+  input, select {
+    font-size: 10px; /* Adjust font size for mobile */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .clear-btn, .add-quiz-btn {
+    font-size: 10px; /* Adjust button font size */
+    padding: 10px; /* Adjust button padding */
+  }
+}

@@ -1,0 +1,41 @@
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #FAFAFC;
+    gap: 100px;
+  }
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  /* Adjust the container layout to be stacked vertically */
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;  /* Reduce gap for mobile */
+    padding: 20px;  /* Add padding for mobile screens */
+    justify-content: flex-start;  /* Align content at the top */
+  }
+
+  /* Adjust image size and behavior for small screens */
+  .image-container img {
+    width: 100%;  /* Make image fill the container width */
+    height: auto;  /* Maintain aspect ratio */
+    max-width: 100%;  /* Prevent image from overflowing */
+    object-fit: contain;  /* Ensure the image fits inside the container */
+  }
+
+  /* Optional: Add a max width for the image to prevent it from being too large */
+  .image-container img {
+    max-width: 500px; /* Limit max width for better layout */
+    margin: 0 auto;  /* Center image if needed */
+  }
+
+  /* If needed, adjust the image container padding or margin */
+  .image-container {
+    margin-bottom: 20px; /* Ensure space below the image */
+  }
+}

@@ -1,0 +1,45 @@
+<!-- Edit Verification Token Modal -->
+<div class="modal" *ngIf="isEmailTokenModalOpen" (click)="close()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="header">
+        <h4>Edit Verification Token</h4>
+        <div class="close-icon" (click)="close()">
+          <span class="close-icon-x">×</span>
+        </div>
+      </div>
+      <div class="content">
+        <form (ngSubmit)="saveChanges()">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="selectedEmailToken.email" required />
+          </div>
+          <div class="form-group">
+            <label for="token">Token:</label>
+            <input type="text" id="token" name="token" [(ngModel)]="selectedEmailToken.token" required />
+          </div>
+          <div class="form-group">
+            <label for="expiryTime">Expiry Time:</label>
+            <input type="datetime-local" id="expiryTime" name="expiryTime" [(ngModel)]="selectedEmailToken.expiryTime" required disabled />
+          </div>
+          <div class="form-group">
+            <label for="createdAt">Created At:</label>
+            <input type="datetime-local" id="createdAt" name="createdAt" [(ngModel)]="selectedEmailToken.createdAt" disabled />
+          </div>
+          <div class="form-group">
+            <label for="lastUpdate">Last Update:</label>
+            <input type="datetime-local" id="lastUpdate" name="lastUpdate" [(ngModel)]="selectedEmailToken.lastUpdate" value="{{selectedEmailToken.lastUpdate | datetimeLocal }}" disabled />
+          </div>
+  
+          <div class="form-actions">
+            <div class="buttons">
+              <button class="update-btn" type="submit">
+                <img src="https://cdn-icons-png.flaticon.com/512/1688/1688988.png" width="20" height="20" alt="update-button" title="update" class="img-small">Update</button>
+              <button class="cancel-btn" type="button" (click)="close()">
+                <img src="https://cdn-icons-png.flaticon.com/512/9426/9426995.png" width="20" height="20" alt="cancel-button" title="cancel" class="img-small">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
