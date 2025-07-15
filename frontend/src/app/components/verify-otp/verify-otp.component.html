@@ -1,0 +1,41 @@
+<div class="container" *ngIf="isLoading">
+  <app-loader></app-loader>
+</div>
+
+<div class="container" *ngIf="!isLoading">
+  <div class="image-container fadeInLeft">
+    <div>
+      <img src="https://cdn-icons-png.flaticon.com/512/9042/9042592.png" width="256" height="256" alt="" title="" class="img-small">
+    </div>
+  </div>
+  <div class="otp-box fadeInRight">
+    <div class="content">
+      <h2>Verify OTP</h2>
+      <p>We have sent OTP</p>
+      <p>verification code and enter</p>
+      <p>the code below</p>
+    </div>
+    <div class="inner-container">
+      <header>
+        <i class="bx bxs-check-shield"></i>
+      </header>
+      <h4>Enter OTP Code</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" maxlength="1" [(ngModel)]="otp1" name="otp1" (input)="moveFocus($event, 'otp2')" id="otp1" #otp1Ref />
+          <input type="text" maxlength="1" [(ngModel)]="otp2" name="otp2" (input)="moveFocus($event, 'otp3')" id="otp2" #otp2Ref />
+          <input type="text" maxlength="1" [(ngModel)]="otp3" name="otp3" (input)="moveFocus($event, 'otp4')" id="otp3" #otp3Ref />
+          <input type="text" maxlength="1" [(ngModel)]="otp4" name="otp4" (input)="moveFocus($event, 'otp1')" id="otp4" #otp4Ref />
+        </div>
+        <div class="resend">
+          <p class="text-blue" *ngIf="!isResend">Didn't receive email? <br> You can resend code in {{ countdown }}s</p>
+          <div class="btns">
+            <button *ngIf="isResend" class="btn-otp" (click)="resendOtp()">Resend OTP</button>
+            <button class="btn-otp" (click)="verifyOtp()">Verify OTP</button>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>

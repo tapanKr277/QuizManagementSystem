@@ -1,0 +1,122 @@
+<div class="container" *ngIf="!isLoading && quiz!=null">
+    
+    <div class="icon">
+      <button mat-icon-button (click)="toggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    
+
+
+    <mat-sidenav-container class="sidenav-container">
+      <!-- Sidenav, the sidebar -->
+      <mat-sidenav #sidenav mode="side" [opened]="isSideNavOpen" position="start">
+          <!-- <app-custom-side-nav (selectedTab)="onSelectTab($event)"></app-custom-side-nav> -->
+            <!-- <button (click)="toggleFullScreen()">SWITCH SCREEN MODE</button> -->
+            <h2>Question</h2>
+            <div class="question-list">
+              <div class="question-number" *ngFor="let question of questions; let i=index">
+                <button 
+                  [ngClass]="{
+                    'current': currentQuestionIndex === i,          
+                    'answered': questionAnswers[question.questionId] !== undefined, 
+                    'flagged': flagedQuestionList[i] === true     
+                  }" 
+                  (click)="goTo(i)">
+                  {{i+1}}
+                </button>
+              </div>
+            </div>
+      </mat-sidenav>
+
+      <!-- Main content area -->
+      <!-- <mat-sidenav-content class="sidebar-content">
+          <div class="table relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+           
+          </div>
+      </mat-sidenav-content> -->
+  </mat-sidenav-container>
+
+
+    <div class="questions">
+      <div class="form">
+        <div class="heading"> 
+          <h1>{{quiz.title}}</h1>
+          <div class="timer"> 
+           <div class="flag-btn">
+            <button>
+              <img (click)="onFlag(currentQuestionIndex)" *ngIf="flagedQuestionList[currentQuestionIndex]==false" src="   https://cdn-icons-png.flaticon.com/512/3106/3106777.png " width="25" height="25" alt="" title="" class="img-small">
+              <img (click)="onFlag(currentQuestionIndex)" *ngIf="flagedQuestionList[currentQuestionIndex]==true" src="   https://cdn-icons-png.flaticon.com/512/3106/3106811.png " width="25" height="25" alt="" title="" class="img-small">
+            </button>
+           </div>
+           <div class="time">
+            <mat-icon>alarm</mat-icon> 
+            {{ timer |  timeFormat }} mins
+          </div>
+          </div>
+        </div>
+  
+        <p class="text">Answer the below question</p>
+        
+        <!-- Display current question and options -->
+        <form class="question">
+          <p>{{ questions[currentQuestionIndex].question }}</p>
+          <p>Choose correct Answer </p>
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="answer" [value]="questions[currentQuestionIndex].option1" 
+                       [(ngModel)]="questionAnswers[questions[currentQuestionIndex].questionId]" 
+                       (change)="selectAnswer(questions[currentQuestionIndex].option1)" />
+                {{ questions[currentQuestionIndex].option1 }}
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="answer" [value]="questions[currentQuestionIndex].option2" 
+                       [(ngModel)]="questionAnswers[questions[currentQuestionIndex].questionId]" 
+                       (change)="selectAnswer(questions[currentQuestionIndex].option2)" />
+                {{ questions[currentQuestionIndex].option2 }}
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="answer" [value]="questions[currentQuestionIndex].option3" 
+                       [(ngModel)]="questionAnswers[questions[currentQuestionIndex].questionId]" 
+                       (change)="selectAnswer(questions[currentQuestionIndex].option3)" />
+                {{ questions[currentQuestionIndex].option3 }}
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="answer" [value]="questions[currentQuestionIndex].option4" 
+                       [(ngModel)]="questionAnswers[questions[currentQuestionIndex].questionId]" 
+                       (change)="selectAnswer(questions[currentQuestionIndex].option4)" />
+                {{ questions[currentQuestionIndex].option4 }}
+              </label>
+            </li>
+          </ol>
+          
+        </form>
+  
+        <div class="buttons">
+          <button *ngIf="currentQuestionIndex > 0" class="btns" (click)="previousQuestion()">Back</button>
+          <button *ngIf="currentQuestionIndex < questions.length - 1" class="btns" (click)="nextQuestion()">Next</button>
+  
+          <!-- Show submit button when the last question is reached -->
+          <button *ngIf="isSubmit" (click)="openModal()"  class="btns">Submit</button>
+        </div>
+      </div>
+    </div>
+    <app-submit-modal [isVisible]="isModalVisible" [title]="'Quiz Title'" (closeModal)="onCloseModal($event)">
+        <p>This is the content of the modal.</p>
+      </app-submit-modal>
+    <app-warning-modal *ngIf="isWarningModalOpen" [title]="'Warning'" [isWarningModalOpen]="isWarningModalOpen" (onCloseModal)="onWarningModalClose($event)">
+
+    </app-warning-modal>
+  </div>
+  
+<div class="container" *ngIf="isLoading">
+  <app-loader></app-loader>
+</div>
+

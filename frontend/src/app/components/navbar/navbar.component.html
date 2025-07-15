@@ -1,0 +1,23 @@
+<div class="navbar">
+  <div class="icon">
+    <!-- Button to open/close the sidenav -->
+    <button mat-icon-button (click)="toggleSidenav()" class="nav-icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <!-- <img src="https://cdn-icons-png.flaticon.com/512/1081/1081040.png" alt="Gyanpath"> -->
+    <span *ngIf="user"><b>Hi {{ user | titlecase }}</b> </span>
+  </div>    
+
+  <!-- Navbar content -->
+  <nav [class.visible]="isNavbarContentVisible">
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/quiz" routerLinkActive="active">Quiz</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    <a routerLink="/login" routerLinkActive="active" *ngIf="!isUserLoggedIn"><button>Login</button></a>
+    <a *ngIf="isUserLoggedIn" routerLinkActive="active"><button (click)="logout()">Logout</button></a>
+    <a routerLink="/profile" routerLinkActive="active">Profile</a>
+    <a *ngIf="isAdminLogin" routerLink="/admin-dashboard" routerLinkActive="active">Admin</a>
+  </nav>
+
+</div>

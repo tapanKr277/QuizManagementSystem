@@ -1,0 +1,74 @@
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for scaling and opacity */
+
+}
+
+.edit-btn {
+   
+    color: white;
+}
+
+.btn-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+th{
+    text-align: center;
+    
+    /* border: 0.1rem solid #ddd; */
+
+}
+
+td{
+    text-align: center;
+}
+
+
+
+/* Hover effects for Edit and Delete buttons */
+.edit-btn:hover, .delete-btn:hover {
+    transform: scale(1.1); /* Scale the button slightly on hover */
+}
+
+/* Styling for icons inside the buttons */
+.edit-btn img, .delete-btn img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect for icons: Slightly enlarge or change opacity */
+.edit-btn:hover img, .delete-btn:hover img {
+    transform: scale(1.2); /* Slightly enlarge the icons on hover */
+    opacity: 0.9; /* Slight fade effect on hover */
+}
+
+
+thead{
+    background-color: #0D0A2C;
+    color: white;
+    border-radius: 8px;
+    position: sticky;
+    top: 0; /* This makes the header stick to the top when scrolling */
+    z-index: 10; 
+}
+
+.table{
+    display: flex;
+    height: auto;
+    max-height: calc(100vh - 190px);
+    border-radius: 8px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #DFDEF1 #f1f1f1;
+    
+}

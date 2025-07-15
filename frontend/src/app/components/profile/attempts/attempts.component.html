@@ -1,0 +1,137 @@
+<table class="w-full text-left table-auto min-w-max">
+    <thead>
+        <tr>
+            <!-- <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                    class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
+                    Attempt Id </p>
+            </th> -->
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                    class="block font-sans text-xs antialiased font-normal leading-none">
+                    Quiz Title </p>
+            </th>
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-none">
+                    Total Marks </p>
+            </th>
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-none">Score </p>
+            </th>
+            <!-- <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                    class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
+                    Remarks </p>
+            </th> -->
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-none">Quiz Time </p>
+            </th>
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-none">Time Taken </p>
+            </th>
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-none">Status </p>
+            </th>
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-none">Total Question </p>
+            </th>
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-none">Number Of Question Attempted </p>
+            </th>
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-none">Attempted At </p>
+            </th>
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-none">Last Update </p>
+            </th>
+            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-none">Action </p>
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngIf="quizAttemptList.length > 0 && !isLoading">
+        <tr *ngFor="let record of quizAttemptList"> <!-- Attempt Id (studentId and quizId) -->
+            <!-- <td class="p-4 border-b border-blue-gray-50">
+                <p
+                    class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                    {{record.quizAttemptId?.userId}}-{{record.quizAttemptId?.quizId}} </p>
+            </td> Quiz Id -->
+            <td class="p-4 border-b border-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">{{record.quizTitle}} </p>
+            </td> <!--Total Marks-->
+            <td class="p-4 border-b border-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">{{record.totalMarks}} </p>
+            </td> <!-- Score -->
+            <td class="p-4 border-b border-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">{{record.score}} </p>
+            </td> <!-- Status -->
+             <!-- Remarks -->
+            <!-- <td class="p-4 border-b border-blue-gray-50">
+                <p
+                    class="block font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
+                    {{record.remarks || 'Not Available'}} </p>
+            </td> Time Taken -->
+            <td class="p-4 border-b border-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">{{record.quizTime}} Min </p>
+            </td>
+            <td class="p-4 border-b border-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">{{record.timeTaken}} Min </p>
+            </td>
+            <td class="p-4 border-b border-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">{{record.status}} </p>
+            </td>
+            <td class="p-4 border-b border-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">{{record.totalQuestion || 'Not Available'}} </p>
+            </td>
+             <!-- Question Attempted -->
+            <td class="p-4 border-b border-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">{{record.numberOfQuestionAttempted || '0'}} </p>
+            </td> <!-- Created At -->
+            <td class="p-4 border-b border-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900">{{record.createdAt ? (record.createdAt | date: 'short') : 'Not Available'}} </p>
+            </td> <!-- Last Update -->
+            <td class="p-4 border-b border-blue-gray-50">
+                <p
+                class="block font-sans text-xs antialiased font-normal leading-normal text-blue-gray-900"> {{record.lastUpdate ? (record.lastUpdate | date: 'short') : 'Not Available'}} </p>
+            </td> <!-- Action Buttons -->
+            <td class="p-4 border-b border-blue-gray-50"> <button *ngIf="record.status === 'PENDING'"
+                    [routerLink]="['/exam', record.quizAttemptId?.quizId]"> <img
+                        src="https://cdn-icons-png.flaticon.com/512/4208/4208490.png" width="25"
+                        height="25" alt="Resume" title="Resume Exam" class="img-small"> </button>
+                <button *ngIf="record.status === 'COMPLETED'"> <img
+                        src="https://cdn-icons-png.flaticon.com/512/6784/6784655.png" width="25"
+                        height="25" alt="Completed" title="Completed Exam" class="img-small"> </button>
+            </td>
+        </tr>
+    </tbody>
+    <tbody *ngIf="quizAttemptList.length === 0 && !isLoading">
+        <tr>
+            <td colspan="12" class="text-center p-4"> No records found </td>
+        </tr>
+    </tbody>
+    <tbody *ngIf="quizAttemptList.length === 0 && isLoading">
+        <tr>
+            <td colspan="12" class="text-center p-4">
+                <app-table-loader></app-table-loader> </td>
+        </tr>
+    </tbody>
+</table>

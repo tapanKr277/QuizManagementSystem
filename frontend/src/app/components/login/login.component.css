@@ -1,0 +1,272 @@
+/* Login container styling */
+.login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #FAFAFC;
+    gap: 100px;
+  }
+
+
+  
+  /* Login box styling */
+  .login-box {
+    font-size: 14px;
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    /* width: 100%; */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .login-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+  
+  /* Heading styling */
+  .login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  /* Label styling */
+  .form-group label {
+    font-size: 10px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  /* Input field styling */
+  .form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focus effect for inputs */
+  .form-group input:focus {
+    border-color: #007bff;
+  }
+
+  .form-group input:hover {
+    border-color: #007bff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  
+  /* Login button styling */
+  .btn-login {
+    padding: 8px 15px;
+    background-color: #4A3AFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .btn-login:hover {
+    background-color: #ffff;
+    color: black;
+    border: solid 0.5px black;
+  }
+  
+  /* Links for "Forgot Password" and "Create an Account" */
+  .links {
+    margin-top: 15px;
+  }
+  
+  .links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 5px;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+
+  .content{
+    margin-bottom: 30px;
+  }
+
+  /* Links hover effect */
+  .links a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+.password-group {
+  position: absolute;
+}
+
+.form-group{
+  position: relative;
+  
+}
+
+
+
+.oauth{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  background-color: #ffff;
+  color: black;
+  border: solid 0.5px black;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+
+.oauth-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.eye-div {
+  position: absolute;
+  right: 10px; /* Adjust to provide spacing from the right edge */
+  top: 50%; /* Vertically center the eye icon */
+  transform: translateY(-50%); /* Adjust positioning for better alignment */
+  z-index: 1; /* Ensure it's on top of the input field */
+  cursor: pointer; /* Indicate that the icon is clickable */
+}
+
+.eye-icon {
+  width: 12px; /* Increased size for better accessibility */
+  height: 12px;
+  transition: transform 0.3s ease;
+  pointer-events: auto; /* Ensures the icon is clickable */
+}
+
+
+
+@media (max-width: 768px) {
+  .eye-icon {
+    width: 16px; /* Slightly smaller icon for smaller screens */
+    height: 16px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .eye-icon {
+    width: 14px; /* Even smaller for small screens */
+    height: 14px;
+  }
+}
+
+  /* Mobile-specific Styling */
+@media (max-width: 768px) {
+
+
+
+  /* Login Container */
+  .login-container {
+    flex-direction: column; /* Stack the login box and image vertically */
+    gap: 40px; /* Reduce the gap between image and login box */
+    padding: 20px;
+  }
+
+  /* Image Container */
+  .image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .image-container img {
+    width: 200px; /* Resize image to fit better on smaller screens */
+    height: auto;
+    margin-bottom: 20px; /* Add space below the image */
+  }
+
+  /* Login Box Styling */
+  .login-box {
+    width: 100%; /* Ensure the login box takes full width */
+    padding: 20px 30px;
+    font-size: 14px;
+    max-width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .login-box h2 {
+    font-size: 22px; /* Adjust font size for mobile */
+    margin-bottom: 10px; /* Reduced space under the heading */
+  }
+
+  .content p {
+    font-size: 14px; /* Adjust text size */
+    margin-bottom: 15px; /* Add space between paragraphs */
+  }
+
+  /* Form Group Adjustments */
+  .form-group {
+    margin-bottom: 15px; /* Reduced space between form fields */
+  }
+
+  .form-group input {
+    font-size: 14px; /* Increase font size for better readability */
+    padding: 12px; /* Increased padding for larger touch targets */
+    width: 100%; /* Make input fields full width */
+  }
+
+  /* Focus Effect for Inputs */
+  .form-group input:focus {
+    border-color: #4A3AFF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Button Styling */
+  .btn-login {
+    width: 100%; /* Make the login button take up the full width */
+    padding: 12px;
+    font-size: 14px; /* Increase font size for easy tapping */
+  }
+
+  /* Links Styling */
+  .links {
+    text-align: center; /* Center the links */
+    margin-top: 15px;
+  }
+
+  .links a {
+    display: block; /* Stack links vertically */
+    font-size: 14px; /* Adjust font size for readability */
+    margin: 10px 0; /* Add space between links */
+  }
+
+  .links a:hover {
+    color: #0056b3;
+  }
+}
+

@@ -1,0 +1,42 @@
+<div *ngIf="isChatboxOpen" class="chatbox bg-gray-100 p-4 rounded-lg shadow-lg w-full max-w-md mx-auto mt-8">
+    <!-- Close Button with hover effect -->
+    <div class="chatbox-header">
+        <p>Your chatting partner</p>
+        <span class="close-btn" (click)="closeChatbox()">
+            <img src="https://cdn-icons-png.flaticon.com/512/9068/9068699.png" width="20" height="20" alt="" title="" class="img-small" id="close-icon">
+        </span>
+    </div>
+
+    <div #messagesContainer class="messages space-y-4 overflow-y-auto h-64 mb-4 p-2 border border-gray-300 rounded-md bg-white">
+        <div *ngFor="let message of messages" class="message"
+            [ngClass]="{ 'text-right': message.sender === 'user', 'text-left': message.sender !== 'user' }">
+            <div [ngClass]="{ 'bg-blue-500 text-white': message.sender === 'user', 'bg-gray-200': message.sender !== 'user' }"
+                class="inline-block p-2 rounded-lg">
+                {{ message.text }}
+            </div>
+        </div>
+        <div *ngIf="isLoading" class="typing-indicator">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+   
+
+    <div class="input-container flex">
+        <input [(ngModel)]="userMessage" type="text" placeholder="Type your message..."
+            class="flex-1 p-2" (keydown.enter)="sendMessage()" />
+        <button (click)="sendMessage()" [disabled]="isLoading" class="p-2 bg-blue-500 text-white rounded-r-lg">
+            Send
+        </button>
+    </div>
+</div>
+
+
+    <!-- Chatbot Icon -->
+    <div *ngIf="!isChatboxOpen"
+        class="fixed bottom-6 right-6 bg-blue-500 text-white p-3 rounded-full cursor-pointer shadow-lg hover:bg-blue-600"
+        (click)="toggleChatbox()">
+        <img src="https://cdn-icons-png.flaticon.com/512/6667/6667572.png" width="25" height="25" alt="" title=""
+            class="img-small">
+    </div>

@@ -1,0 +1,257 @@
+/* Reset margin and padding globally */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width/height */
+
+  
+}
+
+
+.text-danger {
+  display: flex;
+  color: red;
+  font-size: 0.7rem;
+  margin-left: 3px;
+}
+
+.disabled {
+  background-color: #f8f9fa; /* Light gray background */
+  color: #6c757d; /* Gray text */
+  cursor: not-allowed; /* Disable cursor pointer */
+  border-color: #ced4da; /* Light border color similar to disabled fields */
+}
+
+/* Optionally, you can add a slight shadow to make it look more like a disabled field */
+.disabled:focus {
+  box-shadow: none; /* Remove any focus shadow */
+  border-color: #ced4da; /* Keep the border color the same as non-focused */
+}
+
+.icon{
+  display: none;
+}
+
+/* Set the font for the entire application */
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #FAFAFC;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Styling for the content section */
+section {
+  margin-top: 20px;
+}
+
+/* Basic style for headings */
+h1, h2, h3 {
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #222;
+}
+
+/* Links in the content */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Global Body Text */
+body {
+  font-size: 16px; /* Default body font size */
+}
+
+/* Navbar styling (if needed for your layout) */
+
+@media (max-width: 768px){
+  .nav-icon{
+    display: flex;
+  }
+}
+
+
+@media (max-width: 468px){
+  .nav-icon{
+    display: flex;
+  }
+}
+
+
+/* Make content responsive */
+@media screen and (max-width: 1024px) {
+  /* Tablet screens */
+  h1 {
+      font-size: 1.75rem;
+  }
+
+  nav {
+      padding: 15px;
+  }
+
+  nav a {
+      font-size: 14px;
+      margin: 0 10px;
+  }
+
+  section {
+      margin-top: 15px;
+  }
+}
+
+/* Media query for smaller tablet and larger mobile screens */
+@media screen and (max-width: 768px) {
+  /* Tablet / Mobile */
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  nav {
+      padding: 10px;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  nav a {
+      font-size: 14px;
+      margin: 5px 0;
+  }
+
+  .container {
+      width: 90%; /* Adjust container width */
+  }
+
+  section {
+      margin-top: 10px;
+  }
+}
+
+/* Media query for small mobile screens (portrait) */
+@media screen and (max-width: 480px) {
+  /* Small mobile screens */
+  h1 {
+      font-size: 1.25rem;
+  }
+
+  body {
+      font-size: 14px; /* Slightly smaller font for small screens */
+  }
+
+  nav {
+      padding: 10px;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  nav a {
+      font-size: 13px;
+      margin: 5px 0;
+  }
+
+  section {
+      margin-top: 5px;
+  }
+}
+
+/* Additional styling for extra small screens (optional) */
+@media screen and (max-width: 375px) {
+  /* Extra small mobile devices */
+  h1 {
+      font-size: 1.2rem;
+  }
+
+  body {
+      font-size: 13px; /* Reduce font size even more */
+  }
+
+  nav a {
+      font-size: 12px;
+      margin: 5px 0;
+  }
+
+  section {
+      margin-top: 5px;
+  }
+}
+
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 1s forwards;
+}
+
+
+
+
+@keyframes fadeInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.fadeInRight{
+  animation: fadeInRight 1s forwards;
+}
+
+
+
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fadeInUp{
+  animation: fadeInUp 3.5s forwards;
+}
+
+
+@keyframes fadeInList {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.fadeInList{
+  animation: fadeInUp 3.5s forwards;
+}

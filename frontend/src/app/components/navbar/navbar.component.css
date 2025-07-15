@@ -1,0 +1,172 @@
+/* General link styling */
+a {
+  color: #475569;
+  text-decoration: none; /* Remove default underline */
+  font-size: 0.875rem; /* 14px */
+  position: relative; /* Required for positioning the underline */
+}
+
+/* Navbar container styling */
+.navbar {
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1.25rem; /* 20px */
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 0 2px 5px */
+
+}
+
+/* Logo and title styling */
+.navbar img {
+  border-radius: 50%;
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+}
+
+/* Styling for the navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align links to the right */
+  gap: 0.625rem; /* 10px */
+}
+
+/* Styling for each navigation link */
+nav a {
+  padding: 0.625rem 0.9375rem; /* 10px 15px */
+  border-radius: 0.3125rem; /* 5px */
+  font-size: 0.875rem; /* 14px */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: Blue background and color change */
+nav a:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+  color: #4A3AFF; /* Change text color on hover */
+}
+
+/* Add underline effect when hovering */
+nav a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.125rem; /* 2px */
+  background-color: #4A3AFF; /* Blue color */
+}
+
+/* Remove underline for active links */
+nav a.active {
+  font-weight: bold;
+}
+
+/* Button styling within links */
+nav button {
+  padding: 0.5rem 0.9375rem; /* 8px 15px */
+  background-color: #4A3AFF;
+  color: white;
+  border: none;
+  border-radius: 0.3125rem; /* 5px */
+  cursor: pointer;
+  font-size: 0.875rem; /* 14px */
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #4A3AFF;
+}
+
+.navbar-btn {
+  display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px){
+  .navbar nav.visible {
+    display: block;
+}
+
+}
+
+/* Make the navbar responsive for smaller screens */
+@media (max-width: 29.25rem) { /* 468px */
+  /* Show the navbar toggle button only on mobile screens */
+  .navbar-btn {
+      display: block;
+  }
+
+  /* Initially hide the navbar links */
+  .navbar nav {
+      display: none;
+  }
+
+  /* When 'visible' class is added, show the navbar links */
+  .navbar nav.visible {
+      display: flex;
+  }
+
+  .navbar {
+      display: flex;
+      padding: 0.625rem 0.625rem; /* 10px 10px */
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+  }
+
+  .navbar img {
+      margin-bottom: 0.625rem; /* 10px */
+  }
+
+  .title {
+      font-size: 1rem; /* 16px */
+      text-align: left; /* Align title to the left on small screens */
+  }
+
+  nav {
+      width: 100%;
+      justify-content: flex-start; /* Align links to the left on small screens */
+      gap: 0.625rem; /* 10px */
+  }
+
+  nav a {
+      font-size: 0.75rem; /* 12px */
+      padding: 0.5rem 0.625rem; /* 8px 10px */
+  }
+
+  nav button {
+      padding: 0.375rem 0.625rem; /* 6px 10px */
+  }
+}
+
+.icon {
+  display: flex;
+  gap: 0.625rem; /* 10px */
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-hidden {
+  display: none;
+}
+
+span {
+  display: flex;
+  align-items: baseline;
+  font-size: 0.625rem; /* 10px */
+}
+
+.sidebar-content {
+  padding: 1.5rem; /* 24px */
+}
+
+mat-toolbar {
+  position: relative;
+  z-index: 5;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 4rem); /* calc(100vh - 64px) */
+}

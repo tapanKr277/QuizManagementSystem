@@ -1,0 +1,18 @@
+<div class="container">
+    <!-- Sidenav container -->
+    <mat-sidenav-container class="sidenav-container">
+        <!-- Sidenav, the sidebar -->
+        <mat-sidenav #sidenav mode="side" [opened]="isSidenavOpen" position="start">
+            <app-custom-side-nav (selectedTab)="onSelectTab($event)"></app-custom-side-nav>
+        </mat-sidenav>
+
+        <!-- Main content area -->
+        <mat-sidenav-content class="sidebar-content">
+            <div class="table relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+                <app-attempts *ngIf="tabName=='quiz_attempts'"></app-attempts>
+                <app-my-profile *ngIf="tabName=='my_profile'"></app-my-profile>
+                <app-dashboard *ngIf="tabName=='dashboard'"></app-dashboard>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
