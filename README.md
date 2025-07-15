@@ -85,46 +85,38 @@ The **Quiz Management System** allows:
 ## 🛠️ How to Run the Project Locally
 
 ### 1. Clone the Repository
-```bash
+
 git clone https://github.com/tapanKr277/QuizManagementSystem.git
 cd QuizManagementSystem
 
+---
 
-2. Setup Backend
+## 🏁 How to Run the Project Locally (Continued)
+
+### 2. Setup Backend
+
 Navigate to backend directory:
-bash
-Copy
-Edit
+
 cd backend
-Run Spring Boot services:
-bash
-Copy
-Edit
+
 # For Maven:
 mvn clean install
 mvn spring-boot:run
 
 # OR for Gradle:
 ./gradlew bootRun
-⚙️ Make sure to configure application.properties with your database and Gemini API key.
 
-3. Setup Frontend
-Navigate to frontend directory:
-bash
-Copy
-Edit
+### 3. Setup Frontend
+
 cd frontend
-Install dependencies:
-bash
-Copy
-Edit
+
 npm install
-Run the Angular app:
-bash
-Copy
-Edit
+
 ng serve
-App will be available at http://localhost:4200/.
+
+App will be available at:
+👉 http://localhost:4200/
+
 
 🤖 AI Integration Details
 When a teacher/admin uploads a PDF:
@@ -137,7 +129,7 @@ Converts it into relevant quiz questions
 
 Saves it to the quiz database automatically
 
-This process is powered by a dedicated microservice and runs asynchronously using Feign + background processing.
+✅ This process is powered by a dedicated microservice and runs asynchronously using Feign Clients and background processing.
 
 📊 API Documentation
 Swagger is available at:
@@ -146,43 +138,47 @@ bash
 Copy
 Edit
 http://localhost:PORT/swagger-ui/
+Use it to test and explore REST endpoints for all services.
+
 🎓 Education Use Case
 Ideal for:
 
-Coaching centers
+🏫 Schools & Colleges
 
-Schools & Colleges
+🧪 Coaching Centers
 
-Self-practice portals
+💡 Self-Practice Platforms
 
-Online mock test platforms
+🧠 Online Mock Test Portals
 
 🧑‍💻 Author
 Tapan Kumar
-📫 tapankr277@gmail.com
-🔗 Portfolio
-💼 LinkedIn
+📫 Email: tapankr277@gmail.com
+🌐 Portfolio: tapmad.space
+💼 LinkedIn: linkedin.com/in/tapan-kumar-0447691b0
 
 📌 Future Enhancements
-Performance insights powered by AI
+📊 Performance insights powered by AI
 
-Real-time student dashboards
+📈 Real-time student dashboards
 
-Role-based dashboards for teachers vs students
+🔐 Role-based dashboards for teachers vs students
 
-Enhanced natural language chatbot
+💬 Enhanced natural language chatbot support
 
-Built with ❤️ using Angular, Spring Boot & AI
+Built with ❤️ using Angular, Spring Boot, Microservices & AI
 
-yaml
+<!-- Optional Enhancements --> <!-- Let me know if you'd like: - GitHub badges - Screenshots or animated GIFs - Dark mode styling - Deployment CI/CD status -->
+markdown
 Copy
 Edit
 
----
+You can paste this directly into your existing `README.md` file under the previous sections.
 
-Let me know if you also want:
-- A `vercel.json` file
-- GitHub badges for CI, tech stack, or contributors
-- Dark mode version with image previews/screenshots
+Let me know if you'd like:
+- 📸 Screenshots or demo GIFs  
+- 📦 `vercel.json` setup  
+- 🛠 GitHub action CI badge  
+- 🌙 Dark-mode optimized markdown  
 
-I'll help you style it further if needed.
+I can generate all that next.
