@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: apigateway
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+    gateway:
+      routes:
+        - id: auth-service
+          uri: lb://${SECURITY_SERVICE_NAME}
+          predicates:
+            - Path=/oauth2/**,/login/**,/logout/**,/api/auth/**
+
+        - id: quiz-service
+          uri: lb://${QUIZ_SERVICE_NAME}
+          predicates:
+            - Path=/api/quiz/**
+
+        - id: question-service
+          uri: lb://${QUESTION_SERVICE_NAME}
+          predicates:
+            - Path=/api/question/**
+
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: ${FRONTEND_URL}
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders:
+              - Content-Type
+              - Response-Type
+              - Authorization
+            allowCredentials: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER}
+
+server:
+  port: ${API_GATEWAY_SERVER_PORT}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG

@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  eureka-server:
+    container_name: eureka-server
+    build:
+      context: ./server-registry
+      dockerfile: Dockerfile
+    image: eureka-server:latest
+    ports:
+      - "8761:8761"
+    restart: always
+    env_file:
+      - .env
+
+  apigateway:
+    container_name: api-gateway
+    build:
+      context: ./apigateway
+      dockerfile: Dockerfile
+    image: apigateway:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka-server
+    restart: always
+    env_file:
+      - .env
+
+  security:
+    container_name: security
+    build:
+      context: ./security
+      dockerfile: Dockerfile
+    image: security:latest
+    ports:
+      - "${SECURITY_SERVER_PORT:-8081}:${SECURITY_SERVER_PORT:-8081}"
+    depends_on:
+      - mysql
+      - eureka-server
+    restart: always
+    env_file:
+      - .env
+
+  quiz:
+    container_name: quiz
+    build:
+      context: ./quiz
+      dockerfile: Dockerfile
+    image: quiz:latest
+    ports:
+      - "${QUIZ_SERVER_PORT:-8082}:${QUIZ_SERVER_PORT:-8082}"
+    depends_on:
+      - mysql
+      - eureka-server
+    restart: always
+    env_file:
+      - .env
+
+  question:
+    container_name: question
+    build:
+      context: ./question
+      dockerfile: Dockerfile
+    image: question:latest
+    ports:
+      - "${QUESTION_SERVER_PORT:-8083}:${QUESTION_SERVER_PORT:-8083}"
+    depends_on:
+      - mysql
+      - eureka-server
+    restart: always
+    env_file:
+      - .env
+
+volumes:
+  mysql_data:

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a6a52189-9d00-4db6-a9ab-92211eb0e6bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../apigateway/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apigateway/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apigateway/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apigateway/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apigateway/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apigateway/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../question/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../question/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../question/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../question/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../security/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../security/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../security/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/src/main/java/com/gyanpath/apigateway/ApigatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/src/main/java/com/gyanpath/apigateway/security/AuthenticationPreFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/src/main/java/com/gyanpath/apigateway/security/JwtServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/src/main/java/com/gyanpath/apigateway/security/RouterValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apigateway/apigateway/src/test/java/com/gyanpath/apigateway/ApigatewayApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/QuizApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/controller/QuizAttemptAnswerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/controller/QuizAttemptController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/controller/QuizController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/dto/CustomErrorMessageDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/dto/QuestionByIdsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/dto/QuestionDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/dto/QuestionDtoForExam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/dto/QuizAttemptAnswerDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/dto/QuizAttemptDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/dto/QuizCategoryDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/dto/QuizDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/entity/Quiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/entity/QuizAttempt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/entity/QuizAttemptAnswer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/exception/QuizAlreadyCompletedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/exception/QuizAttemptNotFound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/exception/QuizNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/mapper/QuestionAnswerDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/mapper/QuestionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/mapper/QuizAttemptAnswerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/mapper/QuizAttemptMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/mapper/QuizMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/repo/QuizAttemptAnswerRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/repo/QuizAttemptRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/repo/QuizRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/service/QuizAttemptAnswerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/service/QuizAttemptService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/service/QuizService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/service/client/QuestionServiceClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/service/client/UserServiceClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/service/impl/QuizAttemptAnswerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/service/impl/QuizAttemptServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/service/impl/QuizServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/util/QuizAttemptAnswerId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/util/QuizAttemptId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/java/com/gyanpath/quiz/util/QuizStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/src/test/java/com/gyanpath/quiz/QuizApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/SecurityApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/config/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/config/OauthSuccessHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/controller/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/controller/EmailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/controller/GithubAuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/controller/GoogleAuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/controller/UserRolesDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/ChangePasswordDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/ContactUsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/CustomErrorMessageDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/EmailDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/JwtResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/LoginDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/PasswordResetOtpDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/QuestionDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/QuizAttemptAnswerDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/QuizAttemptDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/QuizCategoryDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/QuizDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/RefreshTokenRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/RoleDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/StudentDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/TokenDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/UpdateUserDataDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/VerificationTokenDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/dto/VerifyOtpDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/entity/JwtToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/entity/PasswordResetOtp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/entity/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/entity/VerificationToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/InvalidOtpException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/NotAbleToSendEmail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/OtpNotFound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/PasswordMisMatchException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/QuizNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/ResourceNotFound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/SamePasswordException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/StudentNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/UserNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/UserNotVerifiedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/exception/WrongPasswordException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/mapper/PasswordResetOtpMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/mapper/RoleMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/mapper/UpdateUserDataMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/mapper/VerificationTokenMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/repo/JwtTokenRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/repo/PasswordResetOtpRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/repo/RoleRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/repo/UserRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/repo/VerificationTokenRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/GitHubAuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/GoogleAuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/JwtTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/OtpService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/PasswordResetOtpService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/RoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/SeleniumService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/VerificationTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/client/QuestionServiceClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/client/QuizServiceClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/EmailServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/GitHubAuthServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/GoogleAuthServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/JwtServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/JwtTokenServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/OtpServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/PasswordRestOtpServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/RoleServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/SeleniumServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/UserDetailsImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/service/impl/VerificationTokenServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/util/QuizAttemptAnswerId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/util/QuizAttemptId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/util/QuizStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/java/com/gyanpath/security/util/RoleType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/resources/META-INF/additional-spring-configuration-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/security/src/test/java/com/gyanpath/security/SecurityApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-registry/server-registry/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-registry/server-registry/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-registry/server-registry/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-registry/server-registry/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-registry/server-registry/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-registry/server-registry/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-registry/server-registry/src/main/java/com/gyanpath/server_registry/EurekaServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-registry/server-registry/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-registry/server-registry/src/test/java/com/gyanpath/server_registry/EurekaServerApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2xIkRhoc9SgA2k5KIVsnGqaKP9z" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Dev.executor": "Run",
+    "Application.QuizApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/tapan/OneDrive/Desktop/QuizManagementSystem/backend/security"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Dev" type="Application" factoryName="Application" temporary="true">
+      <envs>
+        <env name="SPRING_DATASOURCE_URL" value="jdbc:mysql://localhost:3306/quiz" />
+        <env name="SPRING_DATASOURCE_USERNAME" value="root" />
+        <env name="SPRING_DATASOURCE_PASSWORD" value="root" />
+        <env name="EUREKA_SERVER" value="http://localhost:8761/eureka/" />
+        <env name="SERVER_PORT" value="8085" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.gyanpath.quiz.QuizApplication" />
+      <module name="quiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gyanpath.quiz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6a52189-9d00-4db6-a9ab-92211eb0e6bd" name="Changes" comment="" />
+      <created>1747632969244</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747632969244</updated>
+    </task>
+    <servers />
+  </component>
+</project>
