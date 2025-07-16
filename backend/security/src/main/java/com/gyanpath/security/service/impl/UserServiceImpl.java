@@ -22,7 +22,6 @@ import org.springframework.stereotype.Service;
 import javax.swing.text.html.Option;
 import java.util.*;
 
-
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -37,8 +36,8 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User getUserByUserName(String userName) throws ResourceNotFoundException {
 		Optional<User> user = userRepo.findByUsername(userName);
-		if(user.isEmpty()){
-			throw new ResourceNotFoundException("User not found with this username "+ userName);
+		if (user.isEmpty()) {
+			throw new ResourceNotFoundException("User not found with this username " + userName);
 		}
 		return user.get();
 	}
@@ -46,8 +45,8 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserDto getUserDtoByUserName(String username) throws ResourceNotFoundException {
 		Optional<User> user = userRepo.findByUsername(username);
-		if(user.isEmpty()){
-			throw new ResourceNotFoundException("User not found with this username "+ username);
+		if (user.isEmpty()) {
+			throw new ResourceNotFoundException("User not found with this username " + username);
 		}
 		UserDto userDto = UserMapper.userToUserDto(user.get());
 		return userDto;
@@ -56,8 +55,8 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserDto getUserByEmail(String email) throws UserNotFoundException {
 		Optional<User> user = userRepo.findByEmail(email);
-		if(user.isEmpty()){
-			throw new UserNotFoundException("User with this email not found "+ email);
+		if (user.isEmpty()) {
+			throw new UserNotFoundException("User with this email not found " + email);
 		}
 		return UserMapper.userToUserDto(user.get());
 	}
@@ -66,20 +65,21 @@ public class UserServiceImpl implements UserService {
 	public List<UserDto> getAllUserList() {
 		List<User> userList = userRepo.findAll();
 		List<UserDto> userDtoList = new ArrayList<>();
-		userList.forEach(user-> userDtoList.add(UserMapper.userToUserDto(user)));
+		userList.forEach(user -> userDtoList.add(UserMapper.userToUserDto(user)));
 		return userDtoList;
 	}
 
 	@Override
 	public UserDto getUserById(Short userId) {
-		User user = userRepo.findById(userId).orElseThrow(()-> new UsernameNotFoundException("User not found with this "+ userId+" id"));
+		User user = userRepo.findById(userId)
+				.orElseThrow(() -> new UsernameNotFoundException("User not found with this " + userId + " id"));
 		return UserMapper.userToUserDto(user);
 	}
 
 	@Override
 	public UserDto updateUserData(UserDto userDto) throws UserNotFoundException {
 		Optional<User> user = userRepo.findById(userDto.getUserId());
-		if(user.isEmpty()){
+		if (user.isEmpty()) {
 			throw new UserNotFoundException("User not found");
 		}
 		User exisitingUser = user.get();
@@ -95,7 +95,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserDto updateUserPartialData(UserDto userDto) throws UserNotFoundException {
 		Optional<User> user = userRepo.findById(userDto.getUserId());
-		if(user.isEmpty()){
+		if (user.isEmpty()) {
 			throw new UserNotFoundException("User not found");
 		}
 		User exisitingUser = user.get();
@@ -109,7 +109,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public boolean deleteUser(Short userId) throws UserNotFoundException {
 		Optional<User> user = userRepo.findById(userId);
-		if(user.isEmpty()){
+		if (user.isEmpty()) {
 			throw new UserNotFoundException("User not found");
 		}
 		user.get().setRoles(null);
@@ -157,7 +157,6 @@ public class UserServiceImpl implements UserService {
 				admin.setIsVerified(true);
 				admin.setPassword(encoder.encode("admin"));
 				admin.setRoles(Set.of(adminRole));
-				admin.setIsActive(true);
 				userRepo.save(admin);
 			}
 
