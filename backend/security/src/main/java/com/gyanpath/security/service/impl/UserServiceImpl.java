@@ -154,6 +154,7 @@ public class UserServiceImpl implements UserService {
 				admin.setPhoneNumber("1234567890");
 				admin.setIsActive(true);
 				admin.setEmail("admin@example.com");
+				admin.setIsVerified(true);
 				admin.setPassword(encoder.encode("admin"));
 				admin.setRoles(Set.of(adminRole));
 				admin.setIsActive(true);
