@@ -23,7 +23,7 @@ services:
       - "8761:8761"
     restart: always
     env_file:
-      - .env
+      - ./.env
 
   apigateway:
     container_name: api-gateway
@@ -37,7 +37,8 @@ services:
       - eureka-server
     restart: always
     env_file:
-      - .env
+      - ./.env
+      - ./apigateway/.env
 
   security:
     container_name: security
@@ -52,7 +53,8 @@ services:
       - eureka-server
     restart: always
     env_file:
-      - .env
+      - ./.env
+      - ./security/.env
 
   quiz:
     container_name: quiz
@@ -67,7 +69,8 @@ services:
       - eureka-server
     restart: always
     env_file:
-      - .env
+      - ./.env
+      - ./quiz/.env
 
   question:
     container_name: question
@@ -82,7 +85,7 @@ services:
       - eureka-server
     restart: always
     env_file:
-      - .env
-
+      - ./question/.env
+      - ./.env
 volumes:
   mysql_data:
