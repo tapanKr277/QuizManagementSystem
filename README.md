@@ -17,7 +17,7 @@ The **Quiz Management System** allows:
 
 ## 🚀 Live Demo
 
-🔗 [Click here to access the live app](https://quiz-management-system-smoky.vercel.app/)
+🔗 [https://quiz-management-system-smoky.vercel.app/](https://gyanpath.tapmad.space/home)
 
 ---
 
