@@ -51,6 +51,7 @@ The **Quiz Management System** allows:
 - **API Gateway** – Routes requests to services
 - **Auth Service** – Manages registration, login, JWT tokens
 - **Quiz Service** – Manages quiz creation, attempt, and results
+- **Question Service** – Manages Question creation
 - **AI Service** – Processes PDFs and uses Gemini API to generate questions
 - **Discovery Server (Eureka)** – Service registry for communication
 - **Admin Dashboard** – For uploading PDFs, adding quizzes, managing users
@@ -99,12 +100,17 @@ Navigate to backend directory:
 
 cd backend
 
+#Up your services
+Start Services One by One 
+1) Eureka Server or Server-Registry
+2) Apigateway
+3) Security (For this service you may required some credentials like Secret key, Email id and its password for E-mail servce, Check the application.properties files whatever field is requried just create .env file and put all the requried keys)
+4) Quiz
+5) Question 
+
 # For Maven:
 mvn clean install
 mvn spring-boot:run
-
-# OR for Gradle:
-./gradlew bootRun
 
 ### 3. Setup Frontend
 
