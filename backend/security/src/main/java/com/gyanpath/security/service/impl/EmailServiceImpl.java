@@ -10,6 +10,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.io.File;
 
@@ -18,6 +19,9 @@ public class EmailServiceImpl implements EmailService {
 
     @Autowired
     private JavaMailSender mailSender;
+
+    @Value("${frontend.url}")
+    private String frontendUrl;
 
     @Override
     public String sendSimpleMail(EmailDetails details) {
@@ -157,7 +161,7 @@ public class EmailServiceImpl implements EmailService {
     @Override
     public boolean sendVerificationEmail(String toEmail, String token) {
         String subject = "Email Verification - Quiz Management System";
-        String verificationUrl = "http://localhost:4200/verify-email?token=" + token + "&email=" + toEmail;
+        String verificationUrl = frontendUrl + "/verify-email?token=" + token + "&email=" + toEmail;
         String htmlContent = generateVerificationEmailContent(toEmail, verificationUrl);
 
         try {
